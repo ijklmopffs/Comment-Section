@@ -1,0 +1,189 @@
+* {
+  font-family: "Rubik", sans-serif;
+  /* box-sizing: border-box; */
+  margin: 0;
+}
+body {
+  background-color: hsl(228, 33%, 97%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+.card {
+  background-color: white;
+  width: 465px;
+  padding: 1em;
+  margin-top: 1em;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.score_board {
+  background-color: hsl(223, 19%, 93%);
+  padding: 0.5em;
+  border-radius: 7px;
+  text-align: center;
+  cursor: pointer;
+}
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.first {
+  display: flex;
+  align-items: center;
+}
+.avatar {
+  width: 30px;
+  height: 30px;
+}
+.name {
+  margin: 0 1em;
+  color: hsl(212, 24%, 26%);
+  font-weight: 700;
+}
+.timestamp {
+  color: gray;
+}
+.second {
+  display: flex;
+  align-items: center;
+  color: hsl(238, 40%, 52%);
+  cursor: pointer;
+  font-weight: 500;
+}
+.second img {
+  margin-right: 0.5em;
+}
+.comment {
+  margin: 1em 0;
+  color: hsl(211, 10%, 45%);
+}
+.replying {
+  color: hsl(238, 40%, 52%);
+  font-weight: 700;
+}
+.replying::before {
+  content: "@";
+  color: hsl(238, 40%, 52%);
+}
+.bottom {
+  display: flex;
+  align-items: center;
+}
+.special {
+  width: 395px;
+  align-self: end;
+}
+.del {
+  margin-right: 2em;
+  margin-left: 0;
+  color: hsl(358, 79%, 66%);
+  font-weight: 500;
+}
+.comment_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+textarea {
+  border-radius: 7px;
+  border: 1px solid hsl(239, 57%, 85%);
+  cursor: pointer;
+}
+textarea:focus {
+  outline: none;
+}
+button {
+  background-color: hsl(238, 40%, 52%);
+  border: none;
+  color: white;
+  padding: 1em 2em;
+  border-radius: 7px;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.5;
+}
+.card.createdDiv {
+  width: 395px;
+  align-self: end;
+}
+.card.extra_reply {
+  width: 395px;
+  align-self: flex-end;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    width: 100%;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  .card.createdDiv {
+    width: 70%;
+    position: relative;
+  }
+  .card.createdDiv button {
+    position: absolute;
+    left: 65%;
+    top: 70%;
+  }
+  .card {
+    width: 80%;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .top {
+    width: 90%;
+  }
+  .comment {
+    width: 90%;
+  }
+  .score_board {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .score {
+    margin: 0 1em;
+  }
+  .second {
+    position: absolute;
+    left: 60%;
+    top: 27%;
+  }
+  .second.next {
+    top: 58%;
+  }
+  .second.first_reply {
+    top: 92%;
+  }
+  .second.second_reply {
+    top: 125%;
+    left: 47%;
+  }
+  .special {
+    align-self: auto;
+  }
+  .comment_box {
+    position: relative;
+  }
+  .comment_box button {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+  }
+  .special {
+    width: 70%;
+  }
+  textarea {
+    order: 1;
+  }
+}

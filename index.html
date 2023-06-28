@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Interactive comments section</title>
+  </head>
+  <body>
+    <!-- Pull dynamic content from the data.json file -->
+    <div class="card">
+      <div class="score_board">
+        <img src="./images/icon-plus.svg" alt="" />
+        <p class="score"></p>
+        <img src="./images/icon-minus.svg" alt="" />
+      </div>
+      <div>
+        <div class="top">
+          <div class="first">
+            <img src="" alt="" class="avatar" />
+            <p class="name"></p>
+            <p class="timestamp"></p>
+          </div>
+          <div class="second">
+            <img src="./images/icon-reply.svg" alt="" />
+            <p>Reply</p>
+          </div>
+        </div>
+        <p class="comment"></p>
+      </div>
+    </div>
+
+    <div class="card next">
+      <div class="score_board">
+        <img src="./images/icon-plus.svg" alt="" />
+        <p class="score next"></p>
+        <img src="./images/icon-minus.svg" alt="" />
+      </div>
+      <div>
+        <div class="top">
+          <div class="first">
+            <img src="" alt="" class="avatar next" />
+            <p class="name next"></p>
+            <p class="timestamp next"></p>
+          </div>
+          <div class="second next">
+            <img src="./images/icon-reply.svg" alt="" />
+            <p>Reply</p>
+          </div>
+        </div>
+        <p class="comment next"></p>
+      </div>
+    </div>
+
+    <div class="line"></div>
+
+    <div class="card first_reply special">
+      <div class="score_board">
+        <img src="./images/icon-plus.svg" alt="" />
+        <p class="score first_reply"></p>
+        <img src="./images/icon-minus.svg" alt="" />
+      </div>
+      <div>
+        <div class="top">
+          <div class="first">
+            <img src="" alt="" class="avatar first_reply" />
+            <p class="name first_reply"></p>
+            <p class="timestamp first_reply"></p>
+          </div>
+          <div class="second first_reply">
+            <img src="./images/icon-reply.svg" alt="" />
+            <p>Reply</p>
+          </div>
+        </div>
+        <div class="bottom">
+          <p class="comment first_reply">
+            <span class="replying first_reply"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card second_reply special">
+      <div class="score_board">
+        <img src="./images/icon-plus.svg" alt="" />
+        <p class="score second_reply"></p>
+        <img src="./images/icon-minus.svg" alt="" />
+      </div>
+      <div>
+        <div class="top">
+          <div class="first">
+            <img src="" alt="" class="avatar second_reply" />
+            <p class="name second_reply"></p>
+            <p class="timestamp second_reply"></p>
+          </div>
+          <div class="second second_reply">
+            <img src="./images/icon-delete.svg" alt="" />
+            <p class="del">Delete</p>
+            <img src="./images/icon-edit.svg" alt="" />
+            <p>Edit</p>
+          </div>
+        </div>
+        <div class="bottom">
+          <p class="comment second_reply">
+            <span class="replying second_reply"></span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card comment_box">
+      <div class="first">
+        <img src="" alt="" class="avatar comment_box" />
+      </div>
+      <textarea name="" id="" cols="40" rows="5"></textarea>
+      <button>SEND</button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
