@@ -129,21 +129,21 @@ button:hover {
   .card.createdDiv {
     width: 70%;
     position: relative;
+    align-self: auto;
+    left: 5%;
   }
   .card.createdDiv button {
     position: absolute;
-    left: 65%;
+    left: 75%;
     top: 70%;
   }
   .card {
     width: 80%;
     flex-direction: column-reverse;
     align-items: flex-start;
+    position: relative;
   }
   .top {
-    width: 90%;
-  }
-  .comment {
     width: 90%;
   }
   .score_board {
@@ -156,34 +156,28 @@ button:hover {
   }
   .second {
     position: absolute;
-    left: 60%;
-    top: 27%;
-  }
-  .second.next {
-    top: 58%;
-  }
-  .second.first_reply {
-    top: 92%;
+    left: 75%;
+    top: 83%;
   }
   .second.second_reply {
-    top: 125%;
     left: 47%;
-  }
-  .special {
-    align-self: auto;
   }
   .comment_box {
     position: relative;
   }
   .comment_box button {
     position: absolute;
-    left: 50%;
+    left: 76%;
     top: 70%;
   }
   .special {
     width: 70%;
+    position: relative;
+    left: 5%;
+    align-self: auto;
   }
   textarea {
     order: 1;
+    width: 100%;
   }
 }

@@ -29,6 +29,14 @@ const replyButton = document.querySelector(".second p");
 const secondReplyButton = document.querySelector(".second.next");
 const commentBox = document.querySelector(".comment_box");
 const allTextarea = document.querySelector("textarea");
+const plus = document.querySelector(".plus");
+const minus = document.querySelector(".minus");
+const nextPlus = document.querySelector(".plus.next");
+const nextMinus = document.querySelector(".minus.next");
+const firstReplyPlus = document.querySelector(".plus.first_reply");
+const firstReplyMinus = document.querySelector(".minus.first_reply");
+const secondReplyPlus = document.querySelector(".plus.second_reply");
+const secondReplyMinus = document.querySelector(".minus.second_reply");
 const filePath = "./data.json";
 
 fetch(filePath)
@@ -155,6 +163,55 @@ fetch(filePath)
         div4.style.display = "none";
       });
       firstReply.insertAdjacentElement("afterend", div4);
+    });
+
+    // FIRST COMMENT
+    plus.addEventListener("click", () => {
+      var currentNumber = parseInt(score.textContent);
+      var newNumber = currentNumber + 1;
+      score.textContent = newNumber;
+    });
+    minus.addEventListener("click", () => {
+      var currentNumber = parseInt(score.textContent);
+      var newNumber = currentNumber - 1;
+      score.textContent = newNumber;
+    });
+
+    // SECOND COMMENT
+    nextPlus.addEventListener("click", () => {
+      var currentNumber = parseInt(nextScore.textContent);
+      var newNumber = currentNumber + 1;
+      nextScore.textContent = newNumber;
+    });
+    nextMinus.addEventListener("click", () => {
+      var currentNumber = parseInt(nextScore.textContent);
+      var newNumber = currentNumber - 1;
+      nextScore.textContent = newNumber;
+    });
+
+    // FIRST REPLY
+    firstReplyPlus.addEventListener("click", () => {
+      var currentNumber = parseInt(replyScore.textContent);
+      var newNumber = currentNumber + 1;
+      replyScore.textContent = newNumber;
+    });
+    firstReplyMinus.addEventListener("click", () => {
+      var currentNumber = parseInt(replyScore.textContent);
+      var newNumber = currentNumber - 1;
+      replyScore.textContent = newNumber;
+    });
+
+    // SECOND REPLY
+    secondReplyPlus.addEventListener("click", () => {
+      var currentNumber = parseInt(secondReplyScore.textContent);
+      var newNumber = currentNumber + 1;
+      secondReplyScore.textContent = newNumber;
+      console.log("+1");
+    });
+    secondReplyMinus.addEventListener("click", () => {
+      var currentNumber = parseInt(secondReplyScore.textContent);
+      var newNumber = currentNumber - 1;
+      secondReplyScore.textContent = newNumber;
     });
   })
   .catch((error) => {
